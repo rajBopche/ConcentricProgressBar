@@ -1,4 +1,4 @@
-# ConcentricProgressBar  [![](https://jitpack.io/v/rajBopche/ConcentricProgressBar.svg)](https://jitpack.io/#rajBopche/ConcentricProgressBar)
+# ConcentricProgressBar                      [![](https://jitpack.io/v/rajBopche/ConcentricProgressBar.svg)](https://jitpack.io/#rajBopche/ConcentricProgressBar)      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 

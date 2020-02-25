@@ -12,7 +12,7 @@ import android.view.animation.DecelerateInterpolator
 
 
 class ConcentricProgressBar(context: Context, attributeSet: AttributeSet) :
-    View(context, attributeSet) {
+        View(context, attributeSet) {
 
 
     companion object {
@@ -47,17 +47,17 @@ class ConcentricProgressBar(context: Context, attributeSet: AttributeSet) :
     init {
 
         val typedArray = context.obtainStyledAttributes(
-            attributeSet, R.styleable.ConcentricProgressBar,
-            0, 0
+                attributeSet, R.styleable.ConcentricProgressBar,
+                0, 0
         )
 
         innerProgressColor = typedArray.getColor(
-            R.styleable.ConcentricProgressBar_inner_progress_color,
-            DEFAULT_INNER_PROGRESS_COLOR
+                R.styleable.ConcentricProgressBar_inner_progress_color,
+                DEFAULT_INNER_PROGRESS_COLOR
         )
         outerProgressColor = typedArray.getColor(
-            R.styleable.ConcentricProgressBar_outer_progress_color,
-            DEFAULT_OUTER_PROGRESS_COLOR
+                R.styleable.ConcentricProgressBar_outer_progress_color,
+                DEFAULT_OUTER_PROGRESS_COLOR
         )
         typedArray.recycle()
     }
@@ -69,7 +69,7 @@ class ConcentricProgressBar(context: Context, attributeSet: AttributeSet) :
         var finalWidth = 0f
 
         val desiredHeight =
-            outerRectHeight  //this height should match the height of outer rectangle
+                outerRectHeight  //this height should match the height of outer rectangle
         val desiredWidth = outerRectWidth   //this width should match the width of outer rectangle
 
 
@@ -83,10 +83,10 @@ class ConcentricProgressBar(context: Context, attributeSet: AttributeSet) :
             MeasureSpec.EXACTLY -> finalWidth = widthSize //set to whatever passed from xml
 
             MeasureSpec.AT_MOST -> finalWidth =
-                desiredWidth.coerceAtMost(widthSize)  //cannot be greater than received width
+                    desiredWidth.coerceAtMost(widthSize)  //cannot be greater than received width
 
             MeasureSpec.UNSPECIFIED -> finalWidth =
-                desiredWidth // view width can be anything, so we want it be of desired width
+                    desiredWidth // view width can be anything, so we want it be of desired width
         }
 
         when (heightMode) {
@@ -102,7 +102,7 @@ class ConcentricProgressBar(context: Context, attributeSet: AttributeSet) :
         outerRectWidth = finalWidth
         setInnerRectMeasure()
         setMeasuredDimension(
-            finalWidth.toInt() + 10, finalHeight.toInt() + 10
+                finalWidth.toInt() + 10, finalHeight.toInt() + 10
         )  //plus 10 is added to accomodate for stroke width of circle
     }
 
@@ -137,10 +137,10 @@ class ConcentricProgressBar(context: Context, attributeSet: AttributeSet) :
             style = Paint.Style.STROKE
         }
         innerRect = RectF(
-            innerRectStartWidth + 10f,
-            innerRectStartHeight + 10f,
-            innerRectEndWidth,
-            innerRectEndHeight
+                innerRectStartWidth + 10f,
+                innerRectStartHeight + 10f,
+                innerRectEndWidth,
+                innerRectEndHeight
         )
         canvas?.drawRect(innerRect, paint)
     }

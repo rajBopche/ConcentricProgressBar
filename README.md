@@ -25,8 +25,9 @@ repositories {
 
 2. Add the library dependency in **App Level build.gradle** file
 
-`implementation "com.github.rajBopche:ConcentricProgressBar:$latest_version"`
-
+```gradle
+implementation "com.github.rajBopche:ConcentricProgressBar:$latest_version"
+```
 
 
 ## Usage
